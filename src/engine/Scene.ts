@@ -23,6 +23,10 @@ export class NXScene {
             { type: "model", name: "test", url: "assets/Dev.glb" }
         ]);
 
+        this.babylonScene.clearColor = new BABYLON.Color3(0.1, 0.1, 0.1);
+
+        this.babylonScene.ambientColor = new BABYLON.Color3(1.3, 0.0, 0.0);
+
     }
 
     cleanScene() {
