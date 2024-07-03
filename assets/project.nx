@@ -1,0 +1,467 @@
+{
+    "name": "C:\\Users\\AG\\Desktop\\temp4\\Temp.blend",
+    "developer": "DEV",
+    "publisher": "PUB",
+    "license": "LIC",
+    "version": "VER",
+    "description": "DESC",
+    "url": "URL",
+    "debug": true,
+    "livelink": false,
+    "splash": {
+        "type": "gif",
+        "duration": "0",
+        "src": ""
+    },
+    "manifest": {
+        "initial": "Scene",
+        "scenes": [
+            {
+                "name": "Scene",
+                "glb_groups": [
+                    "Dev.glb"
+                ],
+                "scene_empties": [
+                    {
+                        "name": "Empty",
+                        "identifier": 1,
+                        "matrix": [
+                            0.009999999776482582,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            -4.3711387287537207e-10,
+                            0.009999999776482582,
+                            1.2000000476837158,
+                            0.0,
+                            -0.009999999776482582,
+                            -4.3711387287537207e-10,
+                            -0.20000006258487701,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                        ],
+                        "parent": null,
+                        "modules": [],
+                        "active_action": null,
+                        "spawn": true,
+                        "tags": ""
+                    }
+                ],
+                "scene_meshes": [
+                    {
+                        "name": "Floors_Floor_265HD+400M+5_TAKTEKKING_2",
+                        "identifier": 2,
+                        "modules": [],
+                        "lightmaps": null,
+                        "cast_shadows": true,
+                        "receive_shadows": true,
+                        "spawn": true,
+                        "object_status": "Dynamic",
+                        "active_action": null,
+                        "tags": ""
+                    }
+                ],
+                "scene_materials": [
+                    {
+                        "name": "00_Isolasjon",
+                        "identifier": 4
+                    },
+                    {
+                        "name": "00_Finer",
+                        "identifier": 5
+                    },
+                    {
+                        "name": "e8461bef_9f35_45cf_a86b_ef1d6fb3246a",
+                        "identifier": 6
+                    },
+                    {
+                        "name": "00_Betong_plasst0pt",
+                        "identifier": 7
+                    },
+                    {
+                        "name": "---_KLEDNING_STAENDE",
+                        "identifier": 8
+                    },
+                    {
+                        "name": "Trespiler",
+                        "identifier": 9
+                    },
+                    {
+                        "name": "Karm_Malt",
+                        "identifier": 10
+                    },
+                    {
+                        "name": "00_Vatrom_-_Glass",
+                        "identifier": 11
+                    },
+                    {
+                        "name": "00_Kj0kken_-_Hvitevarer",
+                        "identifier": 12
+                    },
+                    {
+                        "name": "00_Stal",
+                        "identifier": 13
+                    },
+                    {
+                        "name": "Aquatica-Metal-Silver",
+                        "identifier": 14
+                    },
+                    {
+                        "name": "---_TREVERK",
+                        "identifier": 15
+                    },
+                    {
+                        "name": "00_Vatrom_-_Speil",
+                        "identifier": 16
+                    },
+                    {
+                        "name": "Plywood__Sheathing",
+                        "identifier": 17
+                    },
+                    {
+                        "name": "00_Default_2",
+                        "identifier": 18
+                    },
+                    {
+                        "name": "Stender_isolert_vegg",
+                        "identifier": 19
+                    },
+                    {
+                        "name": "00_Kj0kken_-_Skapstamme",
+                        "identifier": 20
+                    },
+                    {
+                        "name": "00_Kj0kken_-_Hette",
+                        "identifier": 21
+                    },
+                    {
+                        "name": "00_Plast_-_Sort",
+                        "identifier": 22
+                    },
+                    {
+                        "name": "Default",
+                        "identifier": 23
+                    },
+                    {
+                        "name": "00_Glass",
+                        "identifier": 24
+                    },
+                    {
+                        "name": "---_GUL",
+                        "identifier": 25
+                    },
+                    {
+                        "name": "heroal_3961_Linnen",
+                        "identifier": 26
+                    },
+                    {
+                        "name": "Aquatica-Composite-White",
+                        "identifier": 27
+                    },
+                    {
+                        "name": "Parkeringslinje",
+                        "identifier": 28
+                    },
+                    {
+                        "name": "00_Vatrom_-_Krom",
+                        "identifier": 29
+                    },
+                    {
+                        "name": "00_Default",
+                        "identifier": 30
+                    },
+                    {
+                        "name": "---_Terrassebord",
+                        "identifier": 31
+                    },
+                    {
+                        "name": "RNT_Material",
+                        "identifier": 32
+                    },
+                    {
+                        "name": "00_Kj0kken_-_Platetopp_-_Markering",
+                        "identifier": 33
+                    },
+                    {
+                        "name": "00_Gips",
+                        "identifier": 34
+                    },
+                    {
+                        "name": "Acrylic_PVC_Color_NCS_S_0502-Y",
+                        "identifier": 35
+                    },
+                    {
+                        "name": "Heissjakt_transparent",
+                        "identifier": 36
+                    },
+                    {
+                        "name": "Paint_-_White",
+                        "identifier": 37
+                    },
+                    {
+                        "name": "---_GRAFITGRA",
+                        "identifier": 38
+                    },
+                    {
+                        "name": "00_Beslag",
+                        "identifier": 39
+                    },
+                    {
+                        "name": "00_Tre",
+                        "identifier": 40
+                    },
+                    {
+                        "name": "00_M0bler_-_Skap",
+                        "identifier": 41
+                    },
+                    {
+                        "name": "00_Kj0kken_-_Handtak",
+                        "identifier": 42
+                    },
+                    {
+                        "name": "00_Kj0kken_-_Platetopp",
+                        "identifier": 43
+                    },
+                    {
+                        "name": "Render_Material_102-102-102",
+                        "identifier": 44
+                    },
+                    {
+                        "name": "---_TEGL",
+                        "identifier": 45
+                    },
+                    {
+                        "name": "00_Vatrom_-_Kran",
+                        "identifier": 46
+                    },
+                    {
+                        "name": "Gray",
+                        "identifier": 47
+                    },
+                    {
+                        "name": "4f23ef1d_be1b_4e37_af49_96094bfe3a26",
+                        "identifier": 48
+                    },
+                    {
+                        "name": "Aquatica-Wood-Wooden_Siding",
+                        "identifier": 49
+                    },
+                    {
+                        "name": "00_Svart",
+                        "identifier": 50
+                    },
+                    {
+                        "name": "---_BEJ",
+                        "identifier": 51
+                    },
+                    {
+                        "name": "---KJ0KKEN",
+                        "identifier": 52
+                    },
+                    {
+                        "name": "RAL_6012",
+                        "identifier": 53
+                    },
+                    {
+                        "name": "00_Fliser_600x600",
+                        "identifier": 54
+                    },
+                    {
+                        "name": "00_Kj0kken_-_Lys",
+                        "identifier": 55
+                    },
+                    {
+                        "name": "00_Vatrom_-_Innredning_Skapstamme",
+                        "identifier": 56
+                    },
+                    {
+                        "name": "00_Vatrom_-_Vask",
+                        "identifier": 57
+                    },
+                    {
+                        "name": "Gipsplate",
+                        "identifier": 58
+                    },
+                    {
+                        "name": "00_Bindigsverk_isolert",
+                        "identifier": 59
+                    },
+                    {
+                        "name": "00_Kj0kken_-_Front",
+                        "identifier": 60
+                    },
+                    {
+                        "name": "---_SEMENTPLATE",
+                        "identifier": 61
+                    },
+                    {
+                        "name": "Aquatica-Textile-Grey",
+                        "identifier": 62
+                    },
+                    {
+                        "name": "---_BANDTEKKING_GRA",
+                        "identifier": 63
+                    },
+                    {
+                        "name": "---_VINDU_GRAFITGRA",
+                        "identifier": 64
+                    },
+                    {
+                        "name": "RAL6012",
+                        "identifier": 65
+                    },
+                    {
+                        "name": "00_Kj0kken_-_Kran",
+                        "identifier": 66
+                    },
+                    {
+                        "name": "00_Vatrom_-_Innredning_Front",
+                        "identifier": 67
+                    },
+                    {
+                        "name": "00_Vatrom_-_Toalett__lokk",
+                        "identifier": 68
+                    },
+                    {
+                        "name": "00_M0bler_-_bordplate",
+                        "identifier": 69
+                    },
+                    {
+                        "name": "Aquatica-Plastic-Grey",
+                        "identifier": 70
+                    },
+                    {
+                        "name": "Galvanized_Steel_-_Weland_Stal_AB",
+                        "identifier": 71
+                    },
+                    {
+                        "name": "---_PUSS",
+                        "identifier": 72
+                    },
+                    {
+                        "name": "00_Kj0kken_-_Benkeplate",
+                        "identifier": 73
+                    },
+                    {
+                        "name": "---_VINDU_BEJ",
+                        "identifier": 74
+                    },
+                    {
+                        "name": "PVC_Color_NCS_S_0502-Y",
+                        "identifier": 75
+                    },
+                    {
+                        "name": "00_Stalstender_isolert_vegg",
+                        "identifier": 76
+                    },
+                    {
+                        "name": "00_Kj0kken_-_Hvitevarer_Glass",
+                        "identifier": 77
+                    },
+                    {
+                        "name": "00_Vatrom_-_Hvit",
+                        "identifier": 78
+                    },
+                    {
+                        "name": "00_Vatrom_-_Toalett",
+                        "identifier": 79
+                    },
+                    {
+                        "name": "00_Kj0kken_-_Vask",
+                        "identifier": 80
+                    },
+                    {
+                        "name": "Aquatica-Metal-Stainless_Steel",
+                        "identifier": 81
+                    }
+                ],
+                "scene_cameras": [],
+                "scene_lights": [
+                    {
+                        "name": "Sun",
+                        "identifier": 3,
+                        "matrix": [
+                            0.7110673785209656,
+                            0.631304144859314,
+                            0.3095775246620178,
+                            0.0,
+                            -0.6221686601638794,
+                            0.3598202168941498,
+                            0.6952953338623047,
+                            0.0,
+                            0.32755059003829956,
+                            -0.6870112419128418,
+                            0.6486340165138245,
+                            0.0,
+                            0.0,
+                            0.0,
+                            0.0,
+                            1.0
+                        ],
+                        "color": [
+                            1.0,
+                            0.856441855430603,
+                            0.5491299629211426
+                        ],
+                        "intensity": 10.0,
+                        "type": "SUN",
+                        "shadow": false,
+                        "shadowBias": 1.0,
+                        "contactShadow": false,
+                        "parent": null,
+                        "modules": [],
+                        "active_action": null,
+                        "spawn": true,
+                        "tags": "",
+                        "angle": 0.009180432185530663
+                    }
+                ],
+                "scene_speakers": [],
+                "scene_probes": [],
+                "scene_decals": [],
+                "scene_text": [],
+                "scene_curves": [],
+                "scene_modules": [],
+                "environment": {
+                    "backgroundType": "color",
+                    "backgroundColor": [
+                        0.3771159052848816,
+                        0.3771159052848816,
+                        0.3771159052848816
+                    ]
+                }
+            }
+        ]
+    },
+    "gltf_mode": "Combined",
+    "options": {
+        "xr": true,
+        "pipeline": "Standard",
+        "graphics": {
+            "antialiasing": false,
+            "bloom": false,
+            "ssao": false,
+            "ssr": "false",
+            "shadows": false,
+            "shadowType": "PCF",
+            "shadowResolution": "256",
+            "postprocessStack": [],
+            "tonemapping_type": "None",
+            "tonemapping_exposure": 1.0,
+            "tonemapping_gamma": 1.0
+        },
+        "audio": {
+            "effects": 1,
+            "music": 1,
+            "ambient": 1
+        },
+        "video": {
+            "fullscreen": false,
+            "width": 1920.0,
+            "height": 1080.0
+        }
+    }
+}
