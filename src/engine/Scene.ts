@@ -13,6 +13,11 @@ export class NXScene {
         this.babylonScene = new BABYLON.Scene(engine);
         this.app = app;
 
+
+        
+
+
+
         this.createCameras();
         this.createLights();
 
@@ -24,8 +29,9 @@ export class NXScene {
         ]);
 
         this.babylonScene.clearColor = new BABYLON.Color3(0.1, 0.1, 0.1);
-
         this.babylonScene.ambientColor = new BABYLON.Color3(1.3, 0.0, 0.0);
+
+
 
     }
 

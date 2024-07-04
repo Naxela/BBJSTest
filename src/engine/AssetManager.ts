@@ -24,8 +24,41 @@ export class NXAssetManager {
                             this.scene.addMesh(mesh); // Add each loaded mesh to the scene
 
                             if(mesh.material){
-                                console.log("Adding mesh w. material",mesh.material.name);
+
+                                //console.log("Adding mesh w. material", mesh.material.name);
+                                //console.log("Adding mesh", mesh.name);
+
+                                console.log("Adding LM", mesh.name + "_baked.hdr");
+
+                                var sceneLightmap = new BABYLON.Texture("assets/Lightmaps/" + mesh.name + "_denoised.hdr", this.scene);
+                                sceneLightmap.coordinatesIndex = 1;
+                                sceneLightmap.vScale = -1;
+                                mesh.material.lightmapTexture = sceneLightmap;
+                                mesh.material.useLightmapAsShadowmap=true;
+                                
+                                console.log(sceneLightmap);
+
+
                             }
+
+
+
+                            // if(lightmapSet != null){
+
+                            //     if (lightmapSet[material.name] != undefined){
+                            //         console.log("Lightmap found for: " + material.name);
+                            //         var sceneLightmap = new BABYLON.Texture("Lightmaps/" + lightmapSet[material.name], scene);
+                            //         sceneLightmap.coordinatesIndex = 1;
+                            //         sceneLightmap.vScale = -1;
+                            //         material.lightmapTexture = sceneLightmap;
+                            //         material.useLightmapAsShadowmap=true;
+                            //     } else {
+                            //         var sceneLightmap = null;
+                            //     }
+                            
+                            // }
+
+
                             
                             // Add a material to the mesh
                             //const material = new BABYLON.StandardMaterial("myMaterial", this.scene);
