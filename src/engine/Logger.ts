@@ -10,7 +10,7 @@ export class NXLogger {
             console.error(message);
         }
         else {
-            console.log(message);
+            console.log(NXUtility.getTimestamp(), message);
         }
 
         this.entries.push(NXUtility.getTimestamp(), message);

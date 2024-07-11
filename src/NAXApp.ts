@@ -15,19 +15,8 @@ export class NAXApp {
     public scene!: NXScene;
     public canvas!: HTMLCanvasElement;
     public projectData: any; //TODO - DECLARE TYPE
-
-    /*
-
-    Constructor => canvas + setupNAXEngine => initialize => run
-
-    setupNAXEngine loads the project file
-
-
-
-    */
-
-
-
+    public debugMode: boolean = false;
+    public engineTime: number = 0;
 
 
     constructor(canvas: HTMLCanvasElement, readonly projectFile: string) {
@@ -36,7 +25,7 @@ export class NAXApp {
         this.setupNAXEngine(projectFile).then(() => {
             NXLogger.log('Engine initialized');
             this.initialize().then(() => {
-                this.run(true); // Ensure run is called after initialization
+                this.run(); // Ensure run is called after initialization
             });
         }).catch(error => {
             console.error("Failed to setup NAX Engine:", error);
@@ -55,7 +44,13 @@ export class NAXApp {
         //Fetch the project file
         this.projectData = await NXUtility.loadJSON(projectFile);
 
-        NXLogger.log('Project loaded');
+        //Toggle debug setup
+        this.debugMode = this.projectData.debug;
+
+        if(this.debugMode){
+            NXLogger.log('Debug mode enabled');
+        }
+
         NXLogger.log(this.projectData);
 
         var WPG = false;
@@ -67,7 +62,7 @@ export class NAXApp {
             await this.engine.initAsync();
         } else {
             //Create a BabylonJS engine (WebGL)
-            this.engine= new BABYLON.Engine(this.canvas)
+            this.engine = new BABYLON.Engine(this.canvas)
         }
         
         //IF WEBGPU
@@ -79,6 +74,8 @@ export class NAXApp {
     }
 
     async initialize(): Promise<void> {
+
+        NXLogger.log('Initializing application');
         
         //IF WEBGPU
         //await this.engine.initAsync();
@@ -87,16 +84,19 @@ export class NAXApp {
         // other scene setup
     }
 
-    run(debug:Boolean) {
+    run() {
 
-        if (debug) {
+        if (this.debugMode) {
+            NXLogger.log('Debug inspector enabled');
             this.scene.babylonScene.debugLayer.show({ overlay: true });
         } else {
             this.scene.babylonScene.debugLayer.hide();
         }
 
         this.engine.runRenderLoop(() => {
+
             this.scene.babylonScene.render();
+
         });
     }
 
