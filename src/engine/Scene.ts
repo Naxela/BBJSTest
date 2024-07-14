@@ -1,5 +1,7 @@
 import * as BABYLON from "@babylonjs/core";
 import { NAXApp } from "../NAXApp";
+import { NXCamera } from "./Camera";
+import { NXLight } from "./Light";
 import { NXAssetManager } from "./AssetManager";
 import { NXLogger } from "./Logger";
 
@@ -64,12 +66,28 @@ export class NXScene {
         });
 
         //To we need a scene loader?
+        //There is an option to make this a custom one
 
         //Stop the time
+        /*
 
-        //Setup a loading screen
+        If you want to control it manually, you can use:
+
+        engine.runRenderLoop(function () { 
+                if(!scene.paused){
+                    scene.render();
+                }
+        });
+        for you own render loop and set scene.paused when you want.
+
+        Or
+
+        scene.freezeActiveMeshes();
+
+        */
 
         //Setup environment
+        this.createEnvironment();
 
         //Load assets
         this.loadAssets();
@@ -81,17 +99,16 @@ export class NXScene {
         this.createLights();
 
         //Setup speakers
-        //this.createSpeakers();
+        this.createSpeakers();
 
         //Setup postprocess?
-        this.setupPostprocess(engine);
+        //this.setupPostprocess(engine);
 
         //Something XR?
 
         //Remove loadingscreen
-
-        this.babylonScene.clearColor = new BABYLON.Color4(0.1, 0.1, 0.1, 1.0);
-        this.babylonScene.ambientColor = new BABYLON.Color3(1.3, 0.0, 0.0);
+        //Automatic?
+        
 
     }
 
@@ -104,31 +121,46 @@ export class NXScene {
 
     }
 
+    createEnvironment(){
+
+        let sceneData = {
+            environment: {
+                backgroundType: "x"
+            }
+        };
+
+        if(sceneData.environment.backgroundType == "color") {
+            this.babylonScene.clearColor = new BABYLON.Color4(0.1, 0.1, 0.1, 1.0);
+            this.babylonScene.ambientColor = new BABYLON.Color3(1.3, 0.0, 0.0);
+        } else if(sceneData.environment.backgroundType == "texture") {
+            this.babylonScene.clearColor = new BABYLON.Color4(0.1, 0.1, 0.1, 1.0);
+            this.babylonScene.ambientColor = new BABYLON.Color3(1.3, 0.0, 0.0);
+        } else if(sceneData.environment.backgroundType == "sky") {
+            this.babylonScene.clearColor = new BABYLON.Color4(0.1, 0.1, 0.1, 1.0);
+            this.babylonScene.ambientColor = new BABYLON.Color3(1.3, 0.0, 0.0);
+        } else {
+            this.babylonScene.clearColor = new BABYLON.Color4(0.8, 0.1, 0.1, 1.0);
+            this.babylonScene.ambientColor = new BABYLON.Color3(1.3, 0.0, 0.0);
+        }
+
+
+    }
+
     createCameras() {
 
-        //Create cameras
-        
-        this.activeCamera = new BABYLON.ArcRotateCamera("camera", Math.PI/3, Math.PI/3, 10, BABYLON.Vector3.Zero(), this.babylonScene);
-
-        // This targets the camera to scene origin
-        this.activeCamera.setTarget(BABYLON.Vector3.Zero());
-
-        // This attaches the camera to the canvas
-        this.activeCamera.attachControl(this.app.canvas, true);
-
-        //Set scrolling speed
-        this.activeCamera.wheelPrecision = 50.0;
+        //this.activeCamera = new NXCamera(this.babylonScene, this.app.canvas);
+        NXCamera.setupCameras(this.babylonScene, this.app.canvas);
 
     }
 
     //Create lights
     createLights() {
 
-        // This creates a light, aiming 0,1,0 - to the sky (non-mesh)
+        NXLight.setupLights();
 
-        const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 1, 0), this.babylonScene);
+    }
 
-        // Default intensity is 1. Let's dim the light a small amount
+    createSpeakers(){
 
     }
 
@@ -149,17 +181,17 @@ export class NXScene {
 
         //TODO - MOVE TO EXTERNAL FILE AND MAKE MORE MODULAR
 
-        // var standardPipeline = new BABYLON.DefaultRenderingPipeline("NAXStandardPipeline", true, this.babylonScene, [this.activeCamera]);
+        var standardPipeline = new BABYLON.DefaultRenderingPipeline("NAXStandardPipeline", true, this.babylonScene, [this.activeCamera]);
 
-        // standardPipeline.imageProcessingEnabled = true;
-        // standardPipeline.imageProcessing.exposure = 1.0;
-        // standardPipeline.imageProcessing.contrast = 1.0;
-        // standardPipeline.imageProcessing.toneMappingEnabled = true;
+        standardPipeline.imageProcessingEnabled = true;
+        standardPipeline.imageProcessing.exposure = 1.0;
+        standardPipeline.imageProcessing.contrast = 1.0;
+        standardPipeline.imageProcessing.toneMappingEnabled = true;
 
-        // standardPipeline.samples = 4;
-        // standardPipeline.imageProcessing.ditheringEnabled = true;
+        standardPipeline.samples = 4;
+        standardPipeline.imageProcessing.ditheringEnabled = true;
 
-        //engine.setHardwareScalingLevel(0.125);
+        engine.setHardwareScalingLevel(0.125);
 
 
         // var motionblur = new BABYLON.MotionBlurPostProcess(
